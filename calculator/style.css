@@ -1,0 +1,83 @@
+.container {
+     background-color: white;
+     height: 100%;
+     display: grid;
+     place-items: center;
+
+}
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    height:100vh;
+}
+.calc-outer{
+    padding:10px;
+    background-color: black;
+}
+.display{
+    height:50px;
+    background-color: rgb(107, 107, 107);
+    color:white;
+    font-size: 1.3rem;
+    padding:3px;
+    text-align: right;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+.buttons-div{
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    padding:10px 0px;
+    grid-gap: 5px;
+}
+.right{
+    display: grid;
+    grid-gap: 5px;
+}
+.btn {
+    padding:10px;
+    font-size:1rem;
+    background-color: gray;
+    border:none;
+    outline:none;
+    border-radius: 3px;
+    font-weight: bold;
+    color:white;
+}
+.right .btn {
+    background-color: orange !important;
+}
+.btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#equal{
+    background-color: green !important;
+}
+.clear-btn{
+    display: grid;
+    justify-items: end;
+    padding:10px 0px 0px 0px;
+    grid-gap: 5px;
+}
+.clear {
+    background-color: red !important;
+    padding:5px !important;
+
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        display: grid;
+        place-items: stretch;
+   }
+   .buttons-div {
+    grid-template-columns: 2fr .5fr !important;
+    height:60% !important;
+   }
+}
